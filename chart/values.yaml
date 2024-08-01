@@ -1,6 +1,6 @@
 # DefaultImageRegistry will be prepended to all deployed vcluster images, such as the vcluster pod, coredns etc.. Deployed
 # images within the vcluster will not be rewritten.
-defaultImageRegistry: ""
+defaultImageRegistry: ghcr.io/krateoplatformops/
 
 # Global annotations to add to all objects
 globalAnnotations: {}
@@ -213,7 +213,7 @@ syncer:
 
 # Etcd settings
 etcd:
-  image: ghcr.io/krateoplatformops/etcd:3.5.10-0
+  image: registry.k8s.io/etcd:3.5.10-0
   imagePullPolicy: ""
   # The amount of replicas to run
   replicas: 1
@@ -250,12 +250,12 @@ etcd:
 
 # Kubernetes Controller Manager settings
 controller:
-  image: ghcr.io/krateoplatformops/kube-controller-manager:v1.29.0
+  image: registry.k8s.io/kube-controller-manager:v1.29.0
   imagePullPolicy: ""
 
 # Kubernetes Scheduler settings. Only enabled if sync.nodes.enableScheduler is true
 scheduler:
-  image: ghcr.io/krateoplatformops/kube-scheduler:v1.29.0
+  image: registry.k8s.io/kube-scheduler:v1.29.0
   imagePullPolicy: ""
   disabled: true
 
