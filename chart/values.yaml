@@ -154,7 +154,7 @@ proxy:
 # Syncer configuration
 syncer:
   # Image to use for the syncer
-  # image: ghcr.io/loft-sh/vcluster
+  image: ghcr.io/krateoplatformops/vcluster:0.19.6
   imagePullPolicy: ""
   extraArgs: []
   volumeMounts: []
@@ -261,7 +261,7 @@ scheduler:
 
 # Kubernetes API Server settings
 api:
-  image: registry.k8s.io/kube-apiserver:v1.29.0
+  image: ghcr.io/krateoplatformops/kube-apiserver:v1.29.0
   imagePullPolicy: ""
   extraArgs: []
 
